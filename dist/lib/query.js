@@ -19,7 +19,7 @@ exports.findQuery = async(query, projection, config, client) => {
             form : {
                 query : JSON.stringify(query),
                 projection : JSON.stringify(projection),
-                collectionName : config.collectionName,
+                tableName : config.tableName,
                 dbName : config.dbName
             }
         });
@@ -57,7 +57,7 @@ exports.insertQuery = async(query, options, config, client) => {
             form : {
                 query : JSON.stringify(query),
                 options : JSON.stringify(options),
-                collectionName : config.collectionName,
+                tableName : config.tableName,
                 dbName : config.dbName
             }
         });
@@ -98,7 +98,7 @@ exports.updateQuery = async(query, updateDocument, options, config, client) => {
                 query : JSON.stringify(query),
                 updateDocument : JSON.stringify(updateDocument),
                 options : JSON.stringify(options),
-                collectionName : config.collectionName,
+                tableName : config.tableName,
                 dbName : config.dbName
             }
         });
@@ -133,7 +133,7 @@ exports.removeQuery = async(query, options, config, client) => {
             form : {
                 query : JSON.stringify(query),
                 options : JSON.stringify(options),
-                collectionName : config.collectionName,
+                tableName : config.tableName,
                 dbName : config.dbName
             }
         });

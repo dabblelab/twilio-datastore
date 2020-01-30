@@ -6,7 +6,7 @@ const got = require('got'),
 
 function createGotClient(config){
 
-    const {accountSid, authToken, collectionName, dbName} = config || {};
+    const {accountSid, authToken, tableName} = config || {};
 
     if(!accountSid)
         throw new Error(`"accountSid" is required!`);
@@ -14,11 +14,8 @@ function createGotClient(config){
     if(!authToken)
         throw new Error(`"authToken" is required!`);
 
-    if(!dbName)
-        throw new Error(`"dbName" is required!`);
-
-    if(!collectionName)
-        throw new Error(`"collectionName" is required!`);
+    if(!tableName)
+        throw new Error(`"tableName" is required!`);
 
     const client = got.extend({
         prefixUrl: 'http://3.90.179.30:3002/twilio-datastore/v1',

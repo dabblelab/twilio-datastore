@@ -17,8 +17,7 @@ $ npm install @dabblelab/twilio-datastore
 const datastore = require('@dabblelab/twilio-datastore');
 
 const client = new datastore.TwilioDatastoreApiClient({
-    dbName : '<database-name>',
-    collectionName : '<collection-name>',
+    tableName : '<table-name>',
     accountSid : '<twilio-account-sid>',
     authToken : '<twilio-auth-token>'
 });
