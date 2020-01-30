@@ -1,6 +1,7 @@
 /**
  * findQuery returns an array of document objects
  * @params {query} an object of mongodb query
+ * @params {projection} a mongodb find query projection object
  * @params {config} an object which has detailed about twilio accountSid & authToken, db and collection
  * @params {client} a mongo rest api instance
  * @returns An array of all document objects that match query.
@@ -37,6 +38,7 @@ exports.findQuery = async(query, projection, config, client) => {
 /**
  * insertQuery returns an array of document objects
  * @params {query} an insert object of mongodb query
+ * @params {options} options
  * @params {config} an object which has detailed about twilio accountSid & authToken, db and collection
  * @params {client} a mongo rest api instance
  * @returns An array of all document objects that match query.
@@ -116,6 +118,7 @@ exports.updateQuery = async(query, updateDocument, options, config, client) => {
 /**
  * Returns an object about sucessfully remove document or not
  * @params {query} remove query
+ * @params {options} options
  * @params {config} an object which has detailed about twilio accountSid & authToken, db and collection
  * @params {client} a mongo rest api instance
  * @returns return removed document
