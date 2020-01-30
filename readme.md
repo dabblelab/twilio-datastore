@@ -37,7 +37,7 @@ client.find({})
 ```
 
 Note
-> Twilio Autopilot Datastore provides same syntax that are used in [MongoDB find query)](https://docs.mongodb.com/manual/reference/method/db.collection.find/)
+> Twilio Autopilot Datastore provides same syntax that are used in [MongoDB find query](https://docs.mongodb.com/manual/reference/method/db.collection.find/)
 
 ## Insert Query
 
@@ -55,7 +55,7 @@ client.insert(
 ```
 
 Note
-> Twilio Autopilot Datastore provides same syntax that are used in [MongoDB insertOne query)](https://docs.mongodb.com/manual/reference/method/db.collection.insertOne/)
+> Twilio Autopilot Datastore provides same syntax that are used in [MongoDB insertOne query](https://docs.mongodb.com/manual/reference/method/db.collection.insertOne/)
 
 ## Update Query
 
@@ -78,7 +78,7 @@ client.update(
 ```
 
 Note
-> Twilio Autopilot Datastore provides same syntax that are used in [MongoDB updateMany query)](https://docs.mongodb.com/manual/reference/method/db.collection.updateMany/)
+> Twilio Autopilot Datastore provides same syntax that are used in [MongoDB updateMany query](https://docs.mongodb.com/manual/reference/method/db.collection.updateMany/)
 
 ## Remove Query
 
@@ -95,4 +95,4 @@ client.remove(
 ```
 
 Note
-> Twilio Autopilot Datastore provides same syntax that are used in [MongoDB deleteMany query)](https://docs.mongodb.com/manual/reference/method/db.collection.deleteMany/)
+> Twilio Autopilot Datastore provides same syntax that are used in [MongoDB deleteMany query](https://docs.mongodb.com/manual/reference/method/db.collection.deleteMany/)
