@@ -1,6 +1,6 @@
 {
   "name": "@dabblelab/twilio-datastore",
-  "version": "1.0.0-beta.1",
+  "version": "1.0.0-beta.2",
   "description": "store twilio autopilot data into mongoDB collections",
   "main": "dist/index.js",
   "bugs": "https://github.com/Mohammad-Khalid/twilio-datastore/issues",

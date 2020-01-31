@@ -1,6 +1,6 @@
 Twilio Autopilot Datastore
 ================
-A module which stores twilio autopilot data into the mongodb database. It performs all MongoDB operations on the methode define below.
+A persistent data storage solution designed for use with Twilio Functions and Twilio Autopilot.
 
 # Requirements
 
