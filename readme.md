@@ -1,10 +1,10 @@
 Twilio Autopilot Datastore
 ================
-A module which stores the twilio autopilot data into the mongodb database. We can perform all MongoDB operations on following define methods.
+A module which stores twilio autopilot data into the mongodb database. It performs all MongoDB operations on the methode define below.
 
 # Requirements
 
-## Install the twilio-datastore
+## Install twilio-datastore
 
 ```
 $ npm install @dabblelab/twilio-datastore
