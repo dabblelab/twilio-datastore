@@ -1,15 +1,15 @@
 {
   "name": "@dabblelab/twilio-datastore",
-  "version": "1.0.0-beta.2",
-  "description": "store twilio autopilot data into mongoDB collections",
+  "version": "1.0.0-beta.3",
+  "description": "A persistent data storage solution designed for use with Twilio Functions and Twilio Autopilot.",
   "main": "dist/index.js",
-  "bugs": "https://github.com/Mohammad-Khalid/twilio-datastore/issues",
+  "bugs": "https://github.com/dabblelab/twilio-datastore/issues",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Mohammad Khalid",
   "license": "MIT",
-  "homepage": "https://github.com/Mohammad-Khalid/twilio-datastore",
+  "homepage": "https://github.com/dabblelab/twilio-datastore",
   "keywords": [
     "twilio-datastore",
     "twilio",
