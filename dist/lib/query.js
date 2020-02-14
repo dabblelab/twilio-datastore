@@ -151,6 +151,42 @@ exports.removeQuery = async(query, options, config, client) => {
     }
 }
 
+/**
+ * Returns an object about sucessfully remove document or not
+ * @params {query} count query
+ * @params {options} options
+ * @params {config} an object which has detailed about twilio accountSid & authToken, db and collection
+ * @params {client} a mongo rest api instance
+ * @returns return counted document
+ */
+exports.countQuery = async(query, options, config, client) => {
+    try{
+
+        if(!isObject(query))
+            throw new Error(`"${query}" should be an object!`);
+
+        if(!isObject(options))
+            throw new Error(`"${options}" should be an object!`);
+
+        const resp = await client.post(`/count`, {
+            form : {
+                query : JSON.stringify(query),
+                options : JSON.stringify(options),
+                tableName : config.tableName,
+                dbName : config.dbName
+            }
+        });
+
+        const response = JSON.parse(resp.body)
+        if(!response.status)
+            throw new Error(response.message);
+        return response.data;
+
+    }catch(err){
+        throw err;
+    }
+}
+
 function isObject(arg) {
     return arg !== null && typeof arg === 'object';
   }

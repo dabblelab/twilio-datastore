@@ -1,39 +1,14 @@
 "use strict";
 /** @module @dabblelab/twilio-datastore */
 
-const got = require('got'),
-      {findQuery, insertQuery, updateQuery, removeQuery} = require('./lib/query');
-
-function createGotClient(config){
-
-    const {accountSid, authToken, tableName} = config || {};
-
-    if(!accountSid)
-        throw new Error(`"accountSid" is required!`);
-
-    if(!authToken)
-        throw new Error(`"authToken" is required!`);
-
-    if(!tableName)
-        throw new Error(`"tableName" is required!`);
-
-    const client = got.extend({
-        prefixUrl: 'http://3.90.179.30:3002/twilio-datastore/v1',
-        username: accountSid,
-        password : authToken,
-        headers: {
-            'User-Agent': 'twilio-datastore-api',
-        },
-    });
-
-    return client;
-}
+const {createGotClient, createGotDockerClient} = require('./lib/gotClients'),
+      {findQuery, insertQuery, updateQuery, removeQuery, countQuery} = require('./lib/query');
 
 class TwilioDatastoreApiClient {
-    constructor(config){
+    constructor(config, clientType=false){
 
         this.config = config;
-        this.client = createGotClient(config);
+        this.client = !clientType ? createGotClient(config) : createGotDockerClient(config);
     }
 
     find(query = {}, projection = {}) {
@@ -51,6 +26,10 @@ class TwilioDatastoreApiClient {
 
     remove(query = {}, options = {}){
         return removeQuery(query, options, this.config, this.client);
+    }
+
+    count(query = {}, options = {}){
+        return countQuery(query, options, this.config, this.client);
     }
 
 }

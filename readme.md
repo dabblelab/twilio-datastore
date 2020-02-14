@@ -13,6 +13,8 @@ $ npm install @dabblelab/twilio-datastore
 
 # Usage
 
+## API Client
+
 ```
 const datastore = require('@dabblelab/twilio-datastore');
 
@@ -24,7 +26,19 @@ const client = new datastore.TwilioDatastoreApiClient({
 
 ```
 
-## Find Query
+## Docker API Client
+
+```
+const datastore = require('@dabblelab/twilio-datastore');
+
+const client = new datastore.TwilioDatastoreDockerApiClient({
+    tableName : '<table-name>',
+    url : '<docker-server-url>'
+});
+
+```
+
+### Find Query
 
 ```
 client.find({})
@@ -38,7 +52,7 @@ client.find({})
 Note
 > Twilio Autopilot Datastore provides same syntax that are used in [MongoDB find query](https://docs.mongodb.com/manual/reference/method/db.collection.find/)
 
-## Insert Query
+### Insert Query
 
 ```
 client.insert(
@@ -56,7 +70,7 @@ client.insert(
 Note
 > Twilio Autopilot Datastore provides same syntax that are used in [MongoDB insertOne query](https://docs.mongodb.com/manual/reference/method/db.collection.insertOne/)
 
-## Update Query
+### Update Query
 
 ```
 client.update(
@@ -79,7 +93,7 @@ client.update(
 Note
 > Twilio Autopilot Datastore provides same syntax that are used in [MongoDB updateMany query](https://docs.mongodb.com/manual/reference/method/db.collection.updateMany/)
 
-## Remove Query
+### Remove Query
 
 ```
 client.remove(
@@ -95,3 +109,17 @@ client.remove(
 
 Note
 > Twilio Autopilot Datastore provides same syntax that are used in [MongoDB deleteMany query](https://docs.mongodb.com/manual/reference/method/db.collection.deleteMany/)
+
+### Count Query
+
+```
+client.count({}, {})
+    .then((data) => {
+        console.log(data);
+    })
+    .catch(error => console.log(error));
+
+```
+
+Note
+> Twilio Autopilot Datastore provides same syntax that are used in [MongoDB countDocuments query](https://docs.mongodb.com/manual/reference/method/db.collection.countDocuments/#db.collection.countDocuments)
