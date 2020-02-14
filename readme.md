@@ -29,7 +29,7 @@ const client = new datastore.TwilioDatastoreApiClient({
 ## Docker API Client
 
 ## Prerequisite
-    To up and run the Docker image of Twilio Datastore Server. Please follow [Twilio Datastore Server Image](https://github.com/Mohammad-Khalid/twilio-datastore-server-image) and provide the server url in the below section
+> To up and run the Docker image of Twilio Datastore Server. Please follow [Twilio Datastore Server Image](https://github.com/Mohammad-Khalid/twilio-datastore-server-image) and provide the server url in the below section
 
 ```
 const datastore = require('@dabblelab/twilio-datastore');
